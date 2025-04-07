@@ -1,0 +1,317 @@
+# Instructions for Generating a Landing Page for VectyFi
+
+This document provides detailed instructions for an AI tool to generate a ready-to-use landing page for **vectyfi.com**, the website for VectyFi, an AI-driven crypto trading dashboard. The landing page should attract crypto traders, algorithmic traders, and developers, encouraging them to try the dashboard and join the API waitlist. The design should be professional, modern, and consistent with the VectyFi brand, which uses a dark theme with neon accents (purple, orange). The page should be optimized for user acquisition (target: 1,000 users in 3 months) and API waitlist sign-ups (target: 500 in 3 months).
+
+## 1. General Requirements
+- **Purpose**: Promote VectyFi as an AI-driven crypto trading dashboard, drive user sign-ups to the dashboard, and encourage API waitlist registrations.
+- **Target Audience**:
+  - Crypto traders (retail, day, and swing traders) looking for real-time data, technical indicators, and AI predictions.
+  - Algorithmic traders and developers interested in API access to integrate VectyFi’s data into trading bots or custom apps.
+- **Tone**: Professional, confident, and tech-forward, with a focus on empowering users to trade smarter.
+- **Platform**: The landing page should be a single-page HTML/CSS/JavaScript site, responsive for desktop and mobile devices.
+- **Hosting**: The page will be self-hosted on a Linux server using Nginx, with Cloudflared tunneling to expose it to the internet via vectyfi.com.
+
+## 2. Design Guidelines
+- **Color Scheme**:
+  - Background: Dark (#1A1A1A or black).
+  - Text: White (#FFFFFF) for body text, light gray (#D3D3D3) for secondary text.
+  - Accents: Neon purple (#8B5CF6) and neon orange (#F97316) for buttons, highlights, and icons.
+- **Typography**:
+  - Fonts:
+    - **BrunoAceSC** (via Google Fonts) for the logo and headlines (H1, H2, H3).
+    - **Inter** (via Google Fonts) for body text, subheadlines, and all other text.
+  - Headings:
+    - H1: BrunoAceSC, Bold, 36px (e.g., Hero headline).
+    - H2: BrunoAceSC, Bold, 24px (e.g., section headlines).
+    - H3: BrunoAceSC, Bold, 18px (e.g., feature card titles).
+  - Body Text: Inter, Regular, 16px.
+- **Logo**:
+  - Use a stylized “V” logo with a neon purple-to-orange gradient (similar to the logo in the VectyFi dashboard screenshot).
+  - Use BrunoAceSC font for the logo text (“VectyFi”) with the same gradient.
+  - Place the logo in the top-left corner of the header.
+- **Imagery**:
+  - Use a hero image of the VectyFi dashboard (e.g., the BTC/USD analysis screenshot) to showcase the product.
+  - Include mockups of a trading bot interface with the VectyFi logo for the API section (if no mockup is available, use a placeholder image of a laptop with code).
+- **Responsiveness**:
+  - Ensure the page is fully responsive, with a mobile-first design. On mobile, stack sections vertically and adjust font sizes (e.g., H1 to 28px, body to 14px).
+
+## 3. Page Structure and Content
+The landing page should have the following sections, each with specific content and functionality.
+
+### 3.1. Header
+- **Purpose**: Provide navigation and branding.
+- **Content**:
+  - **Logo**: VectyFi logo (stylized “V” with gradient, “VectyFi” text in BrunoAceSC) in the top-left corner, linking to the homepage (vectyfi.com).
+  - **Navigation Links** (top-right):
+    - “Home” (links to #hero section).
+    - “Features” (links to #features section).
+    - “API Waitlist” (links to #api-waitlist section).
+    - “Try Now” (button, neon purple background, links to the dashboard URL: [insert dashboard URL here]).
+  - **Mobile Navigation**: On mobile, collapse the navigation into a hamburger menu (neon purple icon).
+- **Design**:
+  - Background: Transparent with a slight blur effect (backdrop-filter: blur(5px)).
+  - Padding: 20px.
+  - Fixed position at the top of the page.
+
+### 3.2. Hero Section (#hero)
+- **Purpose**: Capture attention and introduce VectyFi with a strong call-to-action.
+- **Content**:
+  - **Headline**: “Trade Smarter with VectyFi 🚀”
+    - Font: BrunoAceSC, Bold, 36px, white.
+  - **Subheadline**: “Your AI-driven crypto trading dashboard. Real-time data, technical indicators, and smart predictions to level up your trades.”
+    - Font: Inter, Regular, 18px, light gray.
+  - **Primary CTA**: “Try VectyFi Free” (button, neon purple background, white text, links to the dashboard URL).
+  - **Secondary CTA**: “Join API Waitlist” (button, neon orange outline, white text, links to #api-waitlist section).
+  - **Image**: A screenshot of the VectyFi dashboard (e.g., the BTC/USD analysis) on the right side (desktop) or below the text (mobile).
+- **Design**:
+  - Background: Dark with a subtle gradient (black to #2D2D2D).
+  - Padding: 80px (desktop), 40px (mobile).
+  - Layout: Two-column (desktop: text on left, image on right; mobile: stacked).
+
+### 3.3. Features Section (#features)
+- **Purpose**: Highlight VectyFi’s key features to convince users to try the dashboard.
+- **Content**:
+  - **Headline**: “Why Choose VectyFi?”
+    - Font: BrunoAceSC, Bold, 24px, white.
+  - **Subheadline**: “Everything you need to make smarter trading decisions.”
+    - Font: Inter, Regular, 16px, light gray.
+  - **Feature Cards** (3 cards, displayed in a row on desktop, stacked on mobile):
+    - **Card 1: Real-Time Data**
+      - Icon: A clock (neon purple).
+      - Title: “Real-Time Market Data”
+      - Description: “Stream live price data from Binance for BTC, ETH, and more.”
+    - **Card 2: AI Predictions**
+      - Icon: A brain (neon orange).
+      - Title: “AI-Driven Predictions”
+      - Description: “Get actionable insights with our advanced AI model.”
+    - **Card 3: Technical Indicators**
+      - Icon: A chart (neon purple).
+      - Title: “Powerful Indicators”
+      - Description: “Analyze trends with RSI, MACD, Bollinger Bands, and more.”
+  - **CTA**: “See All Features” (link, neon purple text, links to a placeholder /features page).
+- **Design**:
+  - Background: Dark (#1A1A1A).
+  - Padding: 60px.
+  - Cards: White border, slight neon glow (box-shadow with purple/orange), rounded corners (8px).
+  - Card Titles: BrunoAceSC, Bold, 18px, white.
+  - Card Descriptions: Inter, Regular, 16px, light gray.
+
+### 3.4. API Waitlist Section (#api-waitlist)
+- **Purpose**: Promote the upcoming API and encourage waitlist sign-ups.
+- **Content**:
+  - **Headline**: “VectyFi API: Coming Soon! 🚀”
+    - Font: BrunoAceSC, Bold, 24px, white.
+  - **Subheadline**: “Integrate real-time data and AI predictions into your trading bots or custom apps. Join the waitlist for early access!”
+    - Font: Inter, Regular, 16px, light gray.
+  - **Incentive**: “Early waitlist members get 1 month of free API access upon launch!”
+    - Font: Inter, Bold, 16px, neon orange.
+  - **Form**:
+    - Email Field: Placeholder text “Enter your email”, white text on a dark background (#333333), rounded corners.
+    - Submit Button: “Join Waitlist” (neon purple background, white text).
+    - Privacy Note: “We respect your privacy. Your email will only be used to notify you about API access.” (small, light gray text, link to a placeholder /privacy page).
+  - **Image**: A mockup of a trading bot interface with the VectyFi logo on the right side (desktop) or below the form (mobile).
+- **Design**:
+  - Background: Dark with a subtle gradient (black to #2D2D2D).
+  - Padding: 60px.
+  - Layout: Two-column (desktop: text/form on left, image on right; mobile: stacked).
+- **Functionality**:
+  - On form submission, send the email to the Flask API endpoint via a POST request:
+    - Endpoint: Use the `API_WAITLIST_URL` environment variable (e.g., `https://yourdomain.com/api/waitlist`).
+    - Request Body: `{ "email": "user@example.com" }`.
+    - Headers: `Content-Type: application/json`.
+  - Handle the API response:
+    - On success (e.g., 200 status): Display a modal with the message: “Thanks for joining the waitlist! We’ll email you when the API is ready.” (neon purple button to close: “Got It”).
+    - On error (e.g., 400/500 status): Display a modal with the message: “Something went wrong. Please try again later.” (neon orange button to close: “Close”).
+  - Use JavaScript (`fetch`) to handle the form submission and display the modal without reloading the page.
+
+### 3.5. Testimonials Section (Optional)
+- **Purpose**: Build trust with social proof (use placeholder testimonials since the project is pre-launch).
+- **Content**:
+  - **Headline**: “What Traders Are Saying”
+    - Font: BrunoAceSC, Bold, 24px, white.
+  - **Testimonial Cards** (2 cards, displayed in a row on desktop, stacked on mobile):
+    - **Card 1**:
+      - Quote: “VectyFi’s AI predictions helped me catch a BTC dip—amazing tool!”
+      - Author: “– Alex, Crypto Trader”
+    - **Card 2**:
+      - Quote: “Can’t wait for the API to integrate VectyFi into my trading bot!”
+      - Author: “– Sarah, Developer”
+- **Design**:
+  - Background: Dark (#1A1A1A).
+  - Padding: 60px.
+  - Cards: White border, slight neon glow, rounded corners.
+  - Quote Text: Inter, Regular, 16px, white.
+  - Author Text: Inter, Regular, 14px, light gray.
+
+### 3.6. Footer
+- **Purpose**: Provide additional links and contact information.
+- **Content**:
+  - **Logo**: VectyFi logo (smaller version, BrunoAceSC font for text).
+  - **Links**:
+    - “Home” (links to #hero).
+    - “Features” (links to #features).
+    - “API Waitlist” (links to #api-waitlist).
+    - “Privacy Policy” (links to a placeholder /privacy page).
+  - **Social Media**:
+    - X Icon (neon purple, links to https://x.com/vectyfi).
+    - Placeholder for Discord and Telegram (grayed out, no links yet).
+  - **Contact**: “Contact us: hello@vectyfi.com” (mailto link).
+  - **Copyright**: “© 2025 VectyFi. All rights reserved.”
+- **Design**:
+  - Background: Dark (#111111).
+  - Padding: 40px.
+  - Text: Inter, Regular, 14px, light gray.
+
+## 4. Functionality Requirements
+- **Form Submission**:
+  - The API waitlist form should send the email to the Flask API endpoint specified in the `API_WAITLIST_URL` environment variable.
+  - Use JavaScript (`fetch`) to make a POST request:
+    ```javascript
+    const API_WAITLIST_URL = "https://yourdomain.com/api/waitlist"; // Replace with actual URL from .env
+    const form = document.querySelector("#waitlist-form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = form.querySelector("input[type='email']").value;
+      try {
+        const response = await fetch(API_WAITLIST_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+        if (response.ok) {
+          showModal("Thanks for joining the waitlist! We’ll email you when the API is ready.", "Got It", "purple");
+        } else {
+          showModal("Something went wrong. Please try again later.", "Close", "orange");
+        }
+      } catch (error) {
+        showModal("Something went wrong. Please try again later.", "Close", "orange");
+      }
+    });
+
+    function showModal(message, buttonText, buttonColor) {
+      const modal = document.createElement("div");
+      modal.style.position = "fixed";
+      modal.style.top = "0";
+      modal.style.left = "0";
+      modal.style.width = "100%";
+      modal.style.height = "100%";
+      modal.style.background = "rgba(0, 0, 0, 0.8)";
+      modal.style.display = "flex";
+      modal.style.alignItems = "center";
+      modal.style.justifyContent = "center";
+      modal.innerHTML = `
+        <div style="background: #1A1A1A; padding: 20px; border-radius: 8px; text-align: center;">
+          <p style="color: white; font-family: Inter, sans-serif; font-size: 16px;">${message}</p>
+          <button onclick="this.parentElement.parentElement.remove()" style="background: ${buttonColor === 'purple' ? '#8B5CF6' : '#F97316'}; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">${buttonText}</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+    ```
+  - If the `API_WAITLIST_URL` cannot be read from a `.env` file in a static HTML context, hardcode the placeholder URL (`https://yourdomain.com/api/waitlist`) and note that the developer will replace it with the actual URL.
+- **Smooth Scrolling**:
+  - Add smooth scrolling for navigation links (e.g., “Features” link scrolls to #features).
+- **Analytics**:
+  - Include Google Analytics tracking code to monitor page views and user interactions (e.g., button clicks, form submissions).
+- **SEO**:
+  - Add meta tags for SEO:
+    - Title: “VectyFi – AI-Driven Crypto Trading Dashboard”
+    - Description: “Trade smarter with VectyFi. Real-time data, technical indicators, and AI predictions for crypto traders. Join our API waitlist for early access!”
+    - Keywords: “crypto trading, AI trading, trading dashboard, crypto API, VectyFi”
+  - Use proper HTML semantics (e.g., <h1> for the hero headline, <section> for each section).
+
+## 5. Technical Requirements
+- **HTML/CSS/JavaScript**:
+  - Generate a single `index.html` file with embedded CSS (in a <style> tag) and JavaScript (in a <script> tag).
+  - Use Flexbox or Grid for layout (e.g., two-column layouts in Hero and API Waitlist sections).
+  - Add hover effects on buttons (e.g., scale up 1.05x, brighter neon glow).
+- **External Resources**:
+  - Google Fonts for “BrunoAceSC” and “Inter”.
+  - Font Awesome for icons (e.g., clock, brain, chart, X, Discord, Telegram).
+- **Assets**:
+  - Placeholder for the VectyFi dashboard screenshot (use a generic crypto dashboard image if unavailable).
+  - Placeholder for the trading bot mockup (use a generic laptop with code image if unavailable).
+  - Generate the VectyFi logo (stylized “V” with neon purple-to-orange gradient, “VectyFi” text in BrunoAceSC) if not provided.
+- **Environment Variables**:
+  - Include a comment in the JavaScript code indicating where to replace the `API_WAITLIST_URL`:
+    ```javascript
+    // Replace with the actual Flask API endpoint from .env or config
+    const API_WAITLIST_URL = "https://yourdomain.com/api/waitlist";
+    ```
+  - Note: Since this is a static HTML page, the developer will need to manually replace the URL with the actual Flask API endpoint (exposed via Cloudflared) unless a build step is added to read a `.env` file.
+
+## 6. Deliverables
+- A single `index.html` file containing all HTML, CSS, and JavaScript.
+- A folder with assets (logo, dashboard screenshot, trading bot mockup).
+- Instructions for self-hosting the page on a Linux server with Cloudflared:
+  - **Set Up Nginx**:
+    - Install Nginx: `sudo apt update && sudo apt install nginx`.
+    - Copy the `index.html` file and assets to `/var/www/html/vectyfi`.
+    - Configure Nginx (`/etc/nginx/sites-available/vectyfi`):
+      ```
+      server {
+        listen 80;
+        server_name vectyfi.com www.vectyfi.com;
+        root /var/www/html/vectyfi;
+        index index.html;
+        location / {
+          try_files $uri $uri/ /index.html;
+        }
+      }
+      ```
+    - Enable the site: `sudo ln -s /etc/nginx/sites-available/vectyfi /etc/nginx/sites-enabled/`.
+    - Restart Nginx: `sudo systemctl restart nginx`.
+  - **Set Up Cloudflared**:
+    - Install Cloudflared: `wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && sudo dpkg -i cloudflared-linux-amd64.deb`.
+    - Authenticate: `cloudflared login`.
+    - Create a tunnel: `cloudflared tunnel create vectyfi`.
+    - Configure the tunnel (`~/.cloudflared/config.yml`):
+      ```
+      tunnel: vectyfi
+      credentials-file: ~/.cloudflared/[tunnel-uuid].json
+      ingress:
+        - hostname: vectyfi.com
+          service: http://localhost:80
+        - service: http_status:404
+      ```
+    - Route DNS: `cloudflared tunnel route dns vectyfi vectyfi.com`.
+    - Run the tunnel: `cloudflared tunnel run vectyfi`.
+  - **DNS Setup**:
+    - Update DNS records at your registrar (e.g., Namecheap) to point vectyfi.com to Cloudflared’s tunnel (follow Cloudflared’s DNS setup instructions).
+- **Optional: Set Up Supabase for Redundant Email Storage**:
+  - Install Docker: `sudo apt install docker.io && sudo systemctl start docker && sudo systemctl enable docker`.
+  - Pull Supabase: `docker-compose pull` (use the official Supabase Docker Compose file from their GitHub: https://github.com/supabase/supabase).
+  - Start Supabase: `docker-compose up -d`.
+  - Access Supabase dashboard (default: `http://localhost:8000`) and create a `waitlist` table:
+    - Columns: `email` (text), `timestamp` (timestamp, default: now()).
+  - Update the Flask API to store emails in Supabase (or add a JavaScript call in the landing page to store emails in Supabase as a backup):
+    ```javascript
+    const SUPABASE_URL = "http://your-supabase-url";
+    const SUPABASE_KEY = "your-supabase-key";
+    await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": SUPABASE_KEY,
+        "Authorization": `Bearer ${SUPABASE_KEY}`,
+      },
+      body: JSON.stringify({ email }),
+    });
+    ```
+  - Expose Supabase via Cloudflared if needed (similar to the landing page setup).
+
+## 7. Success Criteria
+- The landing page should load in under 3 seconds on a standard internet connection.
+- All links and buttons should work (e.g., “Try Now” links to the dashboard, form submission sends email to Flask API).
+- The design should be visually consistent with the VectyFi brand (dark theme, neon accents, BrunoAceSC for headlines, Inter for body text).
+- The page should be fully responsive, with no layout issues on mobile devices (test on 320px–1200px widths).
+- The API waitlist form should successfully send emails to the Flask API and display a confirmation or error message.
+
+---
+
+## Notes for the AI
+- If the dashboard URL is not provided, use a placeholder link: `https://dashboard.vectyfi.com`.
+- The Flask API endpoint (`API_WAITLIST_URL`) is a placeholder. The developer will replace it with the actual URL exposed via Cloudflared.
+- Supabase integration is optional and provided as a backup for storing waitlist emails. If not implemented, the Flask API will handle all waitlist logic.
+- Focus on creating a visually appealing, user-friendly page that drives action (dashboard sign-ups and waitlist registrations).
+- Ensure the page reflects VectyFi’s value proposition: “Trade smarter with AI-driven insights and real-time data.”
